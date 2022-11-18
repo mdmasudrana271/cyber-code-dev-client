@@ -6,7 +6,7 @@ import { useContext } from 'react';
 function App() {
   const {theme} = useContext(ThemeContext)
   return (
-    <div className="App" id={theme}>
+    <div className="App" data-theme={theme}>
       <RouterProvider router={router}></RouterProvider>
     </div>
   );
