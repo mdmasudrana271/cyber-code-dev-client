@@ -1,0 +1,68 @@
+import { createBrowserRouter } from "react-router-dom";
+import Main from "../Layout/Main";
+import Login from "../components/Login/Login";
+import Register from "../components/Register/Register"
+import Courses from "../components/Courses/Courses";
+import Home from "../components/Home/Home";
+import FAQ from "../components/FAQ/FAQ";
+import CourseDetails from "../components/CourseDetails/CourseDetails";
+import ErrorPage from "../components/ErrorPage/ErrorPage";
+import Profile from "../components/Profile/Profile";
+import Checkout from "../components/Checkout/Checkout";
+import PrivateRoutes from "./PrivateRoutes";
+import Blog from '../components/Blog/Blog'
+
+
+export const router = createBrowserRouter([
+    {
+        path: "/",
+        element: <Main></Main>,
+        children: [
+            {
+                path: '/',
+                element: <Home></Home>
+            },
+            {
+                path: '/home',
+                element: <Home></Home>
+            },
+            {
+                path: '/courses',
+                element: <Courses></Courses>,
+                loader: ()=> fetch('https://cybercodedev12.vercel.app/courses')
+            },
+            {
+                path: "courses/:id",
+                element: <CourseDetails></CourseDetails>,
+                loader: ({params}) => fetch(`https://cybercodedev12.vercel.app/courses/${params.id}`)
+
+            },
+            {
+                path: "coursedetails/:id",
+                element: <PrivateRoutes><Checkout></Checkout></PrivateRoutes>,
+                loader: ({params}) => fetch(`https://cybercodedev12.vercel.app/courses/${params.id}`)
+            },
+            {
+                path: '/faq',
+                element: <FAQ></FAQ>
+            },
+            {
+                path: '/blog',
+                element: <Blog></Blog>
+            },
+            {
+                path: '/login',
+                element: <Login></Login>
+            },
+            {
+                path: '/register',
+                element: <Register></Register>
+            },
+            {
+                path: '/profile',
+                element: <Profile></Profile>
+            }
+        ],
+        errorElement: <ErrorPage></ErrorPage>
+    }
+])
