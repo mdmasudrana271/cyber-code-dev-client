@@ -5,13 +5,13 @@ import { AuthContext, ThemeContext } from "../../Context/AuthProvider";
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
-  const { theme,setTheme } = useContext(ThemeContext);
+  const { setTheme } = useContext(ThemeContext);
   const [toggle, setToggle] = useState(true);
-  const handleTheme = () => {
-    if (theme === "dark") {
-      setTheme("light");
-    } else {
+  const changeTheme = () => {
+    if (toggle) {
       setTheme("dark");
+    } else {
+      setTheme("light");
     }
   };
 
@@ -100,7 +100,7 @@ const Header = () => {
             <input
               type="checkbox"
               className="toggle toggle-xs"
-              onClick={handleTheme}
+              onClick={() => changeTheme(setToggle(!toggle))}
             />
             <span>
               <FaMoon className="text-black"></FaMoon>
