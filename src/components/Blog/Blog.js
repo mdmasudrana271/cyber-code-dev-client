@@ -2,7 +2,7 @@ import React from "react";
 
 const Blog = () => {
   return (
-    <div  className="md:flex mx-5 gap-5 my-10">
+    <div  className="md:flex mx-5 gap-5 my-10 md:h-[100vh]">
       <div className="relative flex flex-col max-w-xl p-6 divide-y xl:flex-row xl:divide-y-0 xl:divide-x dark:bg-gray-900 dark:text-gray-100 divide-gray-700">
         <div className="p-3 space-y-1 xl:ml-6">
           <h3 className="text-3xl font-semibold">Applied Learning Project</h3>
@@ -39,6 +39,8 @@ const Blog = () => {
         </div>
       </div>
     </div>
+
+    
   );
 };
 

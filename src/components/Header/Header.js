@@ -1,17 +1,16 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { FaLightbulb, FaMoon, FaSun, FaUser } from "react-icons/fa";
 import { AuthContext, ThemeContext } from "../../Context/AuthProvider";
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
-  const { setTheme } = useContext(ThemeContext);
-  const [toggle, setToggle] = useState(true);
-  const changeTheme = () => {
-    if (toggle) {
-      setTheme("dark");
-    } else {
+  const { theme, setTheme } = useContext(ThemeContext);
+  const handleTheme = () => {
+    if (theme === "dark") {
       setTheme("light");
+    } else {
+      setTheme("dark");
     }
   };
 
@@ -24,7 +23,7 @@ const Header = () => {
   };
 
   return (
-    <div className="navbar bg-gray-100">
+    <div className="navbar bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 text-white">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -47,6 +46,12 @@ const Header = () => {
             tabIndex={0}
             className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
           >
+            <div
+              onClick={handleTheme}
+              className="cursor-pointer flex items-center justify-start mx-3"
+            >
+              {theme === "dark" ? <FaSun></FaSun> : <FaMoon></FaMoon>}
+            </div>
             {user && user.uid ? (
               <li>
                 <Link to="/profile">
@@ -69,8 +74,8 @@ const Header = () => {
               <Link to="/faq">FAQ</Link>
             </li>
             <li>
-            <Link to="/blog">Blog</Link>
-          </li>
+              <Link to="/blog">Blog</Link>
+            </li>
             {user && user?.uid ? (
               <li onClick={handleLogOut}>
                 <Link>Log out</Link>
@@ -91,21 +96,14 @@ const Header = () => {
           <FaLightbulb className="text-amber-400" /> Cybercodedev
         </Link>
       </div>
-      <div className="navbar-center hidden lg:flex">
+      <div className="navbar-end mr-6 hidden lg:flex">
         <ul className="menu menu-horizontal p-0">
-          <li className="flex items-center">
-            <span>
-              <FaSun className="text-amber-400"></FaSun>
-            </span>{" "}
-            <input
-              type="checkbox"
-              className="toggle toggle-xs"
-              onClick={() => changeTheme(setToggle(!toggle))}
-            />
-            <span>
-              <FaMoon className="text-black"></FaMoon>
-            </span>
-          </li>
+          <div
+            onClick={handleTheme}
+            className="cursor-pointer flex items-center justify-start mx-3"
+          >
+            {theme === "dark" ? <FaSun></FaSun> : <FaMoon></FaMoon>}
+          </div>
           <li>
             <Link to="/home">Home</Link>
           </li>
