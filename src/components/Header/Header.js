@@ -23,7 +23,7 @@ const Header = () => {
   };
 
   return (
-    <div className="navbar bg-gray-400 bg-opacity-40 backdrop-blur-md text-black sticky top-0 z-10">
+    <div className="navbar bg-gray-400 bg-opacity-40 backdrop-blur-md text-black sticky top-0 z-10 ">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -63,7 +63,7 @@ const Header = () => {
                   />
                 </Link>
               </li>
-            ) : undefined}
+            )  : undefined}
             <li>
               <Link to="/home">Home</Link>
             </li>
@@ -75,6 +75,9 @@ const Header = () => {
             </li>
             <li>
               <Link to="/blog">Blog</Link>
+            </li>
+            <li>
+              <Link to="/contact">Contact</Link>
             </li>
             {user && user?.uid ? (
               <li onClick={handleLogOut}>
@@ -96,7 +99,7 @@ const Header = () => {
           <FaLightbulb className="text-amber-400" /> Cybercodedev
         </Link>
       </div>
-      <div className="navbar-end mr-6 hidden lg:flex">
+      <div className="navbar-center mr-6 hidden lg:flex">
         <ul className="menu menu-horizontal p-0">
           <div
             onClick={handleTheme}
@@ -116,6 +119,9 @@ const Header = () => {
           <li>
             <Link to="/blog">Blog</Link>
           </li>
+          <li>
+              <Link to="/contact">Contact</Link>
+            </li>
           {user && user?.uid ? (
             <li onClick={handleLogOut}>
               <Link>Log out</Link>
@@ -133,11 +139,11 @@ const Header = () => {
           {user || user?.email ? (
             <li>
               <Link to="/profile">
-                <img
+                {user?.photoURL ? <img
                   className="w-10 rounded-full"
                   src={user?.photoURL}
                   alt=""
-                />
+                /> : <FaUser/>}
                 <p>{user?.displayName}</p>
               </Link>
             </li>

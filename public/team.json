@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Jhankar Mahbub",
+        "image": "https://i.ibb.co/kQtYnbt/jhankar.png",
+        "position": "CEO"
+    },
+    {
+        "name": "Karina Islam",
+        "image": "https://i.ibb.co/Lz7QSp8/1670514423957image-removebg-preview-22-1.png",
+        "position": "Advisor"
+    },
+    {
+        "name": "MD GIAS UDDIN",
+        "image": "https://i.ibb.co/1dtLfd5/gias-uddin.png",
+        "position": "Web Instructor"
+    },
+    {
+        "name": "Mir Hussain Murtaza",
+        "image": "https://i.ibb.co/z6z7bL9/mir-hossain.png",
+        "position": "Web Instructor"
+    },
+    {
+        "name": "Md. Mehedi Hasan",
+        "image": "https://i.ibb.co/SmbnP3T/Md-Mehedi-Hasan.png",
+        "position": "Web Instructor"
+    }
+]

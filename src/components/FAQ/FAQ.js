@@ -2,12 +2,12 @@ import React from "react";
 
 const FAQ = () => {
   return (
-    <div>
-      <div tabIndex={0} className="collapse group mb-5">
-        <div className="collapse-title bg-primary text-primary-content group-focus:bg-black group-focus:text-secondary-content">
+    <div className="mt-5 mx-10">
+      <div tabIndex={0} className="collapse group mb-5 rounded">
+        <div className="collapse-title bg-indigo-500 text-primary-content group-focus:bg-indigo-700 group-focus:text-secondary-content">
           what is cors?
         </div>
-        <div className="collapse-content bg-primary text-primary-content group-focus:bg-black group-focus:text-secondary-content">
+        <div className="collapse-content bg-primary text-primary-content group-focus:bg-indigo-700 group-focus:text-secondary-content">
           <p>
             Cross-Origin Resource Sharing (CORS) is an HTTP-header based
             mechanism that allows a server to indicate any origins (domain,
@@ -21,12 +21,12 @@ const FAQ = () => {
           </p>
         </div>
       </div>
-      <div tabIndex={0} className="collapse group mb-5">
-        <div className="collapse-title bg-primary text-primary-content group-focus:bg-black group-focus:text-secondary-content">
+      <div tabIndex={0} className="collapse group mb-5 rounded">
+        <div className="collapse-title bg-indigo-500 text-primary-content group-focus:bg-indigo-700 group-focus:text-secondary-content">
           Why are you using firebase? What other options do you have to
           implement authentication?
         </div>
-        <div className="collapse-content bg-primary text-primary-content group-focus:bg-black group-focus:text-secondary-content">
+        <div className="collapse-content bg-indigo-500 text-primary-content group-focus:bg-indigo-700 group-focus:text-secondary-content">
           <p>
             {" "}
             Firebase Authentication provides backend services, easy-to-use SDKs,
@@ -37,11 +37,11 @@ const FAQ = () => {
           </p>
         </div>
       </div>
-      <div tabIndex={0} className="collapse group mb-5">
-        <div className="collapse-title bg-primary text-primary-content group-focus:bg-black group-focus:text-secondary-content">
+      <div tabIndex={0} className="collapse group mb-5 rounded">
+        <div className="collapse-title bg-indigo-500 text-primary-content group-focus:bg-indigo-700 group-focus:text-secondary-content">
           How does the private route work?
         </div>
-        <div className="collapse-content bg-primary text-primary-content group-focus:bg-black group-focus:text-secondary-content">
+        <div className="collapse-content bg-indigo-500 text-primary-content group-focus:bg-indigo-700 group-focus:text-secondary-content">
           <p>
             The react private route component renders child components (
             children ) if the user is logged in. If not logged in the user is
@@ -50,11 +50,11 @@ const FAQ = () => {
           </p>
         </div>
       </div>
-      <div tabIndex={0} className="collapse group mb-5">
-        <div className="collapse-title bg-primary text-primary-content group-focus:bg-black group-focus:text-secondary-content">
+      <div tabIndex={0} className="collapse group mb-5 rounded">
+        <div className="collapse-title bg-indigo-500 text-primary-content group-focus:bg-indigo-700 group-focus:text-secondary-content">
           What is Node? How does Node work?
         </div>
-        <div className="collapse-content bg-primary text-primary-content group-focus:bg-black group-focus:text-secondary-content">
+        <div className="collapse-content bg-primary text-primary-content group-focus:bg-indigo-700 group-focus:text-secondary-content">
           <p>
             It is a used as backend service where javascript works on the
             server-side of the application. This way javascript is used on both
@@ -64,6 +64,7 @@ const FAQ = () => {
           </p>
         </div>
       </div>
+      
       <img
         src="https://img.freepik.com/free-vector/thoughtful-woman-with-laptop-looking-big-question-mark_1150-39362.jpg?w=740&t=st=1666699405~exp=1666700005~hmac=ebb9337fd62ab1296c5522ead8ca5d3a70bb8b1a58ca31b4510917fbccbba66b"
         alt=""

@@ -11,6 +11,7 @@ import Profile from "../components/Profile/Profile";
 import Checkout from "../components/Checkout/Checkout";
 import PrivateRoutes from "./PrivateRoutes";
 import Blog from '../components/Blog/Blog'
+import Contact from "../components/Contact/Contact";
 
 
 export const router = createBrowserRouter([
@@ -45,6 +46,10 @@ export const router = createBrowserRouter([
             {
                 path: '/faq',
                 element: <FAQ></FAQ>
+            },
+            {
+                path: '/contact',
+                element: <Contact></Contact>
             },
             {
                 path: '/blog',
