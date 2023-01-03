@@ -2,75 +2,51 @@ import React from "react";
 
 const FAQ = () => {
   return (
-    <div className="mt-5 mx-10">
-      <div tabIndex={0} className="collapse group mb-5 rounded">
-        <div className="collapse-title bg-indigo-500 text-primary-content group-focus:bg-indigo-700 group-focus:text-secondary-content">
-          what is cors?
-        </div>
-        <div className="collapse-content bg-primary text-primary-content group-focus:bg-indigo-700 group-focus:text-secondary-content">
-          <p>
-            Cross-Origin Resource Sharing (CORS) is an HTTP-header based
-            mechanism that allows a server to indicate any origins (domain,
-            scheme, or port) other than its own from which a browser should
-            permit loading resources. CORS also relies on a mechanism by which
-            browsers make a "preflight" request to the server hosting the
-            cross-origin resource, in order to check that the server will permit
-            the actual request. In that preflight, the browser sends headers
-            that indicate the HTTP method and headers that will be used in the
-            actual request.
-          </p>
-        </div>
-      </div>
-      <div tabIndex={0} className="collapse group mb-5 rounded">
-        <div className="collapse-title bg-indigo-500 text-primary-content group-focus:bg-indigo-700 group-focus:text-secondary-content">
-          Why are you using firebase? What other options do you have to
-          implement authentication?
-        </div>
-        <div className="collapse-content bg-indigo-500 text-primary-content group-focus:bg-indigo-700 group-focus:text-secondary-content">
-          <p>
-            {" "}
-            Firebase Authentication provides backend services, easy-to-use SDKs,
-            and ready-made UI libraries to authenticate users to your app. It
-            supports authentication using passwords, phone numbers, popular
-            federated identity providers like Google, Facebook and Twitter, and
-            more
-          </p>
-        </div>
-      </div>
-      <div tabIndex={0} className="collapse group mb-5 rounded">
-        <div className="collapse-title bg-indigo-500 text-primary-content group-focus:bg-indigo-700 group-focus:text-secondary-content">
-          How does the private route work?
-        </div>
-        <div className="collapse-content bg-indigo-500 text-primary-content group-focus:bg-indigo-700 group-focus:text-secondary-content">
-          <p>
-            The react private route component renders child components (
-            children ) if the user is logged in. If not logged in the user is
-            redirected to the /login page with the return url passed in the
-            location state property
-          </p>
+    <section className="px-10 items-center py-20 bg-blue-500 rounded-xl">
+      <div className="bg-gray-300 bg-opacity-20 backdrop-blur-md p-10 rounded-xl">
+        <div className="space-y-4">
+          <h1 className="text-5xl font-semibold hover:scale-0 text-center mb-10">
+            FAQ_
+          </h1>
+          <details className="w-full border rounded-lg">
+            <summary className="px-4 py-6 focus:outline-none text-3xl text-white">
+              For Whom Is This Course?
+            </summary>
+            <p className="px-4 py-6 pt-0 ml-4 -mt-4 text-white">
+              This Course Is Created For Those Who Want To Learn Web Development
+              From Scratch And Build A Career As A Web Developer In Software
+              Companies.Even Those Who Studied CSE For Four Years But Didn’t
+              Learn Much And Couldn’t Decide What To Do, Can Complete Web
+              Development From This Course And Apply For Jobs.{" "}
+            </p>
+          </details>
+          <details className="w-full border rounded-lg">
+            <summary className="px-4 py-6 focus:outline-none text-3xl text-white">
+              What Prior Experience Is Needed For This Course?
+            </summary>
+            <p className="px-4 py-6 pt-0 ml-4 -mt-4 text-white">
+              Since We’ll Be Teaching From Scratch, You Don’t Need To Know
+              Anything Beforehand. But If You Have Free Time, You Can Do These
+              Things: Be Comfortable With A Computer, Internet So That You Can
+              Search Anything Online You Should Have Basic English Literacy
+              Typing Speed 15-30 Wpm Will Be Excellent. Familiarity With HTML,
+              CSS Would Be Fantastic..
+            </p>
+          </details>
+          <details className="w-full border rounded-lg">
+            <summary className="px-4 py-6 focus:outline-none text-3xl text-white">
+              Eleifend feugiat sollicitudin laoreet adipiscing bibendum suscipit
+              erat?
+            </summary>
+            <p className="px-4 py-6 pt-0 ml-4 -mt-4 text-white">
+              Justo libero tellus integer tincidunt justo semper consequat
+              venenatis aliquet imperdiet. Ultricies urna proin fusce nulla
+              pretium sodales vel magna et massa euismod vulputate sed.{" "}
+            </p>
+          </details>
         </div>
       </div>
-      <div tabIndex={0} className="collapse group mb-5 rounded">
-        <div className="collapse-title bg-indigo-500 text-primary-content group-focus:bg-indigo-700 group-focus:text-secondary-content">
-          What is Node? How does Node work?
-        </div>
-        <div className="collapse-content bg-primary text-primary-content group-focus:bg-indigo-700 group-focus:text-secondary-content">
-          <p>
-            It is a used as backend service where javascript works on the
-            server-side of the application. This way javascript is used on both
-            frontend and backend. Node. js runs on chrome v8 engine which
-            converts javascript code into machine code, it is highly scalable,
-            lightweight, fast, and data-intensive.
-          </p>
-        </div>
-      </div>
-      
-      <img
-        src="https://img.freepik.com/free-vector/thoughtful-woman-with-laptop-looking-big-question-mark_1150-39362.jpg?w=740&t=st=1666699405~exp=1666700005~hmac=ebb9337fd62ab1296c5522ead8ca5d3a70bb8b1a58ca31b4510917fbccbba66b"
-        alt=""
-        className=" mx-auto w-96 rounded-lg shadow-md dark:bg-gray-500"
-      />
-    </div>
+    </section>
   );
 };
 

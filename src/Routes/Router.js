@@ -4,7 +4,6 @@ import Login from "../components/Login/Login";
 import Register from "../components/Register/Register"
 import Courses from "../components/Courses/Courses";
 import Home from "../components/Home/Home";
-import FAQ from "../components/FAQ/FAQ";
 import CourseDetails from "../components/CourseDetails/CourseDetails";
 import ErrorPage from "../components/ErrorPage/ErrorPage";
 import Profile from "../components/Profile/Profile";
@@ -12,6 +11,7 @@ import Checkout from "../components/Checkout/Checkout";
 import PrivateRoutes from "./PrivateRoutes";
 import Blog from '../components/Blog/Blog'
 import Contact from "../components/Contact/Contact";
+import FAQ from "../components/FAQ/FAQ";
 
 
 export const router = createBrowserRouter([
@@ -44,7 +44,7 @@ export const router = createBrowserRouter([
                 loader: ({params}) => fetch(`https://cybercodedev12.vercel.app/courses/${params.id}`)
             },
             {
-                path: '/faq',
+                path:'/faq',
                 element: <FAQ></FAQ>
             },
             {
