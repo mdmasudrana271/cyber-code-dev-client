@@ -17,7 +17,7 @@ const CategoryCourses = () => {
 
     return (
         <div>
-            <div className=' my-10 mx-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mx-10'>
+            <div className=' my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mx-10'>
                 {
                     courses.map(course => <CategoryCard key={course._id} course={course}></CategoryCard>)
                 }

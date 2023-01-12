@@ -9,7 +9,6 @@ import ErrorPage from "../components/ErrorPage/ErrorPage";
 import Profile from "../components/Profile/Profile";
 import Checkout from "../components/Checkout/Checkout";
 import PrivateRoutes from "./PrivateRoutes";
-import Blog from '../components/Blog/Blog'
 import Contact from "../components/Contact/Contact";
 import FAQ from "../components/FAQ/FAQ";
 
@@ -50,10 +49,6 @@ export const router = createBrowserRouter([
             {
                 path: '/contact',
                 element: <Contact></Contact>
-            },
-            {
-                path: '/blog',
-                element: <Blog></Blog>
             },
             {
                 path: '/login',

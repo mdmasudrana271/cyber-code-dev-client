@@ -9,7 +9,7 @@ import Team from "./Team/Team";
 
 const Home = () => {
   return (
-    <section>
+    <section className="overflow-hidden">
       <div className="bg-indigo-600"><Banner></Banner></div>
       <div className="mt-20">
         <h2 className="text-5xl font-bold text-center hover:text-indigo-500">Our Courses</h2>

@@ -74,9 +74,6 @@ const Header = () => {
               <Link to="/faq">FAQ</Link>
             </li>
             <li>
-              <Link to="/blog">Blog</Link>
-            </li>
-            <li>
               <Link to="/contact">Contact</Link>
             </li>
             {user && user?.uid ? (
@@ -99,7 +96,7 @@ const Header = () => {
           <FaLightbulb className="text-amber-400" /> Cybercodedev
         </Link>
       </div>
-      <div className="navbar-center mr-6 hidden lg:flex">
+      <div className="navbar-end mr-6 hidden lg:flex">
         <ul className="menu menu-horizontal p-0">
           <div
             onClick={handleTheme}
@@ -115,9 +112,6 @@ const Header = () => {
           </li>
           <li>
             <Link to="/faq">FAQ</Link>
-          </li>
-          <li>
-            <Link to="/blog">Blog</Link>
           </li>
           <li>
               <Link to="/contact">Contact</Link>
